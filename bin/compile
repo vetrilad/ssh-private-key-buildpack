@@ -29,9 +29,6 @@ if [ "$ssh_key" != "" ]; then
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
 	done
 
-	ls -la "$HOME/.ssh/id_rsa"
-	cat "$HOME/.ssh/id_rsa"
-
 	exit 0
 else
 	echo "-----> No SSH private key"

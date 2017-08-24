@@ -20,10 +20,9 @@ if [ "$ssh_key" != "" ]; then
 	# home directory of the built machine. The symlink resolves the issue.
 	mkdir "$1/.ssh"
 	ln -s "$1/.ssh" "$HOME/.ssh"
-	
-	chmod 600 "$HOME/.ssh/id_rsa"
 
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
+	chmod 600 "$HOME/.ssh/id_rsa"
 
 	IFS=',' read -ra HOST <<< "$ssh_hosts"
 	for i in "${HOST[@]}"; do

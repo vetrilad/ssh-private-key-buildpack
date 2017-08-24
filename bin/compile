@@ -20,6 +20,9 @@ if [ "$ssh_key" != "" ]; then
 	# home directory of the built machine. The symlink resolves the issue.
 	mkdir "$1/.ssh"
 	ln -s "$1/.ssh" "$HOME/.ssh"
+	
+	chmod 600 "$HOME/.ssh/id_rsa"
+
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 
 	IFS=',' read -ra HOST <<< "$ssh_hosts"
@@ -27,7 +30,6 @@ if [ "$ssh_key" != "" ]; then
 		ssh -oStrictHostKeyChecking=no -T $i 2>&1 | indent
 	done
 
-	chmod 600 "$HOME/.ssh/id_rsa"
 	ls -la "$HOME/.ssh/id_rsa"
 	cat "$HOME/.ssh/id_rsa"
 

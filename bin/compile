@@ -28,6 +28,7 @@ if [ "$ssh_key" != "" ]; then
 	done
 
 	chmod 600 "$HOME/.ssh/id_rsa"
+	ls -la "$HOME/.ssh/id_rsa"
 	cat "$HOME/.ssh/id_rsa"
 
 	exit 0

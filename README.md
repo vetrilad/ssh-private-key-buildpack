@@ -1,3 +1,5 @@
+# If you are seeing this, please let me know what project are you using this - there is a nicer solutoin to getting the dependancies now. 
+
 # ssh-private-key-buildpack
 
 A Heroku buildpack for setting the ssh private key as part of the application build. It's meant to be used as part of a setup [using multiple buildpacks](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app), so other buildpacks can authenticate with hosts using ssh keys, for instance to install dependencies from private git repositories.

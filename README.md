@@ -1,4 +1,4 @@
-# If you are seeing this, please let me know what project are you using this - there is a nicer solutoin to getting the dependancies now. 
+# If you are seeing this, please let me know what project are you using it in - there is a nicer solution to getting the dependancies now. 
 
 # ssh-private-key-buildpack
 
